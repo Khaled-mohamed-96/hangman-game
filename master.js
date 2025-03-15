@@ -92,6 +92,7 @@ async function startGame() {
 async function getDataFromJson(json) {
   try {
     const response = await fetch(json);
+    console.log(response);
     if (!response.ok) {
       throw new Error(`Http error Status ${response.status}`);
     }
