@@ -81,17 +81,20 @@ async function startGame() {
     // Create Empty Span
     let span = document.createElement("span");
 
-    // Check IF This A Lerret Hint And Poush Him
-    if (let.toLowerCase() === letterHint.toLowerCase()) {
-      span.innerHTML = letterHint;
-      counterAnswerLett++;
-    }
-
-    allSpansLetters.forEach((child) => {
-      if (child.innerHTML.toLowerCase() === letterHint.toLowerCase()) {
-        child.classList.add("clicked");
+    // Check Letter Length > 4
+    if (randomValueValue.length > 4) {
+      // Check IF This A Lerret Hint And Poush Him
+      if (let.toLowerCase() === letterHint.toLowerCase()) {
+        span.innerHTML = letterHint;
+        counterAnswerLett++;
       }
-    });
+
+      allSpansLetters.forEach((child) => {
+        if (child.innerHTML.toLowerCase() === letterHint.toLowerCase()) {
+          child.classList.add("clicked");
+        }
+      });
+    }
 
     // If The Letter IS Space
     if (let === " ") {
