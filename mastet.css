@@ -31,6 +31,16 @@ body {
     color: #ddd;
     font-weight: bold;
     letter-spacing: 1.5px;
+    border-radius: 6px;
+
+    @media (max-width : 767px) {
+        & {
+            text-align: center;
+            padding: 10px;
+            width: 350px;
+            height: 150px;
+        }
+    }
 }
 
 .container {

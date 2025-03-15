@@ -32,7 +32,7 @@ lettersArray.forEach((let) => {
   // Append Span To The Lettest Container
   letterSContainer.appendChild(span);
 });
-
+let allSpansLetters = document.querySelectorAll(".letter-box");
 // Tregar The Function
 document.onload = startGame();
 async function getApiData() {
@@ -65,6 +65,7 @@ async function startGame() {
   let randomValueNumber = Math.floor(Math.random() * randomPropValue.length);
   randomValueValue = randomPropValue[randomValueNumber];
   console.log(randomValueValue);
+  let letterHint = randomValueValue[0];
   // Set Category Inof
   document.querySelector(".game-info .category span").innerHTML =
     randomPropName;
@@ -79,6 +80,17 @@ async function startGame() {
   lettersAndSpace.forEach((let) => {
     // Create Empty Span
     let span = document.createElement("span");
+
+    // Check IF This A Lerret Hint And Poush Him
+    if (let.toLowerCase() === letterHint.toLowerCase()) {
+      span.innerHTML = letterHint;
+    }
+
+    allSpansLetters.forEach((child) => {
+      if (child.innerHTML.toLowerCase() === letterHint.toLowerCase()) {
+        child.classList.add("clicked");
+      }
+    });
 
     // If The Letter IS Space
     if (let === " ") {
