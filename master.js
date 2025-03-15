@@ -179,7 +179,7 @@ function endGame() {
   if (theStateus) {
     let levelGame =
       wrongAttempts <= 2 ? "Exlant" : wrongAttempts <= 5 ? "Good" : "Normal";
-    divText = document.createTextNode(`You Are Good Your Level : ${levelGame}`);
+    divText = document.createTextNode(`I LOVE YOU MARMARTII`);
   } else {
     divText = document.createTextNode(
       `Game Over The Word IS ${randomValueValue}`
