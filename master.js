@@ -84,6 +84,7 @@ async function startGame() {
     // Check IF This A Lerret Hint And Poush Him
     if (let.toLowerCase() === letterHint.toLowerCase()) {
       span.innerHTML = letterHint;
+      counterAnswerLett++;
     }
 
     allSpansLetters.forEach((child) => {
