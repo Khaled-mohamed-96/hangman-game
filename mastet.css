@@ -337,6 +337,13 @@ hr {
     justify-content: center;
     min-height: 104px;
 
+    @media (max-width : 767px) {
+        & {
+            min-height: 52px;
+
+        }
+    }
+
     span {
         width: 60px;
         height: 60px;
@@ -349,6 +356,15 @@ hr {
         background-color: #fdfdfd;
         border-bottom: 3px solid var(--border-color);
         transition: .3s;
+
+        @media (max-width : 767px) {
+            & {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+        }
 
         &.has-space {
             background: none;
